@@ -73,10 +73,12 @@
                                             <i class="entypo-pencil"></i>
                                             编辑
                                         </a>
+                                        @if($category['id'] != 1)
                                         <a href="{{url('/admin/category/delete', array('id' => $category['id']))}}" class="btn btn-danger btn-sm btn-icon icon-left" onclick="return confirm('确认删除吗？')">
                                             <i class="entypo-cancel"></i>
                                             删除
                                         </a>
+                                        @endif
                                     </div>
                                     <div class="tips-angle diamond"></div>
                                 </div>
@@ -97,9 +99,9 @@
 @endsection
 
 @section('page_css')
-<link rel="stylesheet" href="{{ asset('/assets/js/selectboxit/jquery.selectBoxIt.css') }}"  id="style-resource-3">
+<link rel="stylesheet" href="{{ asset('/backend/js/selectboxit/jquery.selectBoxIt.css') }}"  id="style-resource-3">
 @endsection
 
 @section('page_js')
-<script src="{{ asset('/assets/js/selectboxit/jquery.selectBoxIt.min.js') }}" id="script-resource-11"></script>
+<script src="{{ asset('/backend/js/selectboxit/jquery.selectBoxIt.min.js') }}" id="script-resource-11"></script>
 @endsection

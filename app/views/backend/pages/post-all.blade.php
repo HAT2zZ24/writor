@@ -49,8 +49,10 @@
                     <td>
                         @if(!count($post->categories()))
                             无
-                        @else
+                        @elseif(count($post->categories()))
                             {{join('、', array_fetch($post->categories(), 'name'))}}
+                        @else
+                        无
                         @endif
                     </td>
                     <td>{{$post->view_count}}</td>
@@ -60,14 +62,17 @@
                 @endif
             </tbody>
         </table>
+        <div class="pull-right">
+            {{$posts->links()}}
+        </div>
     </div>
 </div>
 @endsection
 
 @section('page_css')
-<link rel="stylesheet" href="{{ asset('/assets/js/selectboxit/jquery.selectBoxIt.css') }}"  id="style-resource-3">
+<link rel="stylesheet" href="{{ asset('/backend/js/selectboxit/jquery.selectBoxIt.css') }}"  id="style-resource-3">
 @endsection
 
 @section('page_js')
-<script src="{{ asset('/assets/js/selectboxit/jquery.selectBoxIt.min.js') }}" id="script-resource-11"></script>
+<script src="{{ asset('/backend/js/selectboxit/jquery.selectBoxIt.min.js') }}" id="script-resource-11"></script>
 @endsection

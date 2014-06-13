@@ -56,16 +56,17 @@
                 @endif
             </tbody>
         </table>
+        <div class="pull-right">
+            {{$users->links()}}
+        </div>
     </div>
 </div>
 @endsection
 
 @section('page_css')
-<link rel="stylesheet" href="{{ asset('/assets/js/selectboxit/jquery.selectBoxIt.css') }}"  id="style-resource-3">
-<link rel="stylesheet" href="{{ asset('/assets/js/icheck/skins/minimal/_all.css') }}"  id="style-resource-5">
+<link rel="stylesheet" href="{{ asset('/backend/js/selectboxit/jquery.selectBoxIt.css') }}"  id="style-resource-3">
 @endsection
 
 @section('page_js')
-<script src="{{ asset('/assets/js/selectboxit/jquery.selectBoxIt.min.js') }}" id="script-resource-11"></script>
-<script src="{{ asset('/assets/js/icheck/icheck.min.js') }}" id="script-resource-18"></script>
+<script src="{{ asset('/backend/js/selectboxit/jquery.selectBoxIt.min.js') }}" id="script-resource-11"></script>
 @endsection
